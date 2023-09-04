@@ -311,6 +311,17 @@
     justify-content: center;
     margin: 3em 1em -1em 1em;
   }
+
+  .btn-login-disabled {
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(100deg, rgb(254, 254, 255) 49%, red 120%);
+    text-align: center;
+    justify-content: center;
+    margin: 3em 1em -1em 1em;
+  }
   .btn-login:hover{
     color: red;
   }

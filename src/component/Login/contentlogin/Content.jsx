@@ -16,6 +16,7 @@ function ContentLogin() {
       }
     ];
 
+    // const [isFormComplete, setIsFormComplete] = useState(false)
     const [formValues, setFormValues] = useState({
       email: '',
       password: '',
@@ -30,6 +31,7 @@ function ContentLogin() {
         ...formValues,
         [name]: value,
       });
+
     };
 
 
@@ -88,7 +90,12 @@ function ContentLogin() {
             {/* {renderErrorMessage(formValues.password)} */}
             <br />
             <br />
-            <button type='submit'  className="btn-login"  disabled={isSubmitDisabled}>Login</button>
+            <button type='submit'  
+              className={formValues.email != '' && formValues.password != '' ? 'btn-login' : 'btn-login-disabled'}  
+              disabled={isSubmitDisabled}
+            >
+              Login
+            </button>
             
             <button className="btn-google"> Google  <img className='img-gg'src={Google} alt="google"/> </button>
         </form>
