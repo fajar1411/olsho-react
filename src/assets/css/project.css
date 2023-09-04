@@ -1,0 +1,327 @@
+/* navregister */
+@font-face {
+    font-family: "font-gg";
+    src: url("static/AlexBrush-Regular.ttf") format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+/* #container-nav{
+    height: 6vh;
+    width: auto;
+    padding: 20px;
+ } */
+.nav-regis{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(255, 255, 255);
+    color: #fff;
+}
+
+.container-panah{
+    float: left;
+}
+#container-logo{
+    width: 2vh;
+    height: 50px;
+    display: flex;
+    margin:50px 12em 40px 25em;
+    align-items: center;
+}
+.container-panah h3 {
+    float: left;
+    margin: 120px -5em 100px -1px;
+    padding: 20 px;
+    color: black;
+    word-spacing: 2px;
+    font-style: italic;
+    font-size: 15px;
+    font-family: 'font-gg', Arial, sans-serif;
+
+}
+
+#container-logo a img{
+   
+    height: 40px;
+    width: 150px;
+    
+}
+.container-panah h3 a:hover{
+    color: red;
+}
+.container-panah h3 a{
+    text-decoration: none;
+}
+
+#container-help{
+   
+    height: 5vh;
+    box-sizing:9 border-box ;
+    box-shadow: 0 10px 10px -20px black;
+    border: 1px 2px ridge black;   
+    height: 50px;
+    display: flex;
+    padding: 10px;
+    margin:2px 6em 2px auto;
+
+}
+#container-help a img{
+    float: right;
+    height:45px;
+    width: 100px;
+    
+}
+@media screen and (max-width: 500px) {
+    .container-nav {
+        display: none;
+        float: right;
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: 40px;
+        padding: 20px 0;
+     
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    #container-logo {
+        display: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        padding: 20px 0;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    #container-help{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        padding: 20px 0;
+    }
+    
+}
+
+
+/* contentregistercss */
+
+#container-content{
+    display: flex;
+    background: linear-gradient(390deg, rgb(254, 254, 255,0) 49%, rgba(34,193,195,1) 120%);
+    height: 80vh;
+    width: auto;
+    padding: 0 200px;
+}
+
+#container-kiri{
+    float: left;
+    height: 80vh;
+    width: 75%;
+    background: linear-gradient(348deg, rgb(254, 254, 255,0)40%, rgb(34,193,195,1) 120%);
+    margin-left: -15em;
+}
+.logo-bk{
+    height: 200px;
+    width: 700px;
+    margin: 180px 24.5em ;background-size:cover ;
+
+}
+
+#container-kanan{
+    border-radius: 5px;
+    background: linear-gradient(346deg, rgb(254, 254, 255) 49%, rgba(34,193,195,1) 120%);
+    padding: 10px;
+    width: 200%;
+    margin: 1em -10em 1em 16em;
+}
+
+
+.img-gg{
+    float: left;
+    border-radius: 2px;
+    height: 15px;
+    margin: 20em 6em 20em -8em;
+}
+
+
+.regist-input {
+    width:300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 10px;
+    margin: 4em -1em 1em 4em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-register {
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(100deg, rgb(254, 254, 255) 49%, rgba(34,193,195,1) 120%);
+    text-align: center;
+    margin: 3em 1em 1em 7em;
+  }
+  .btn-google{
+    display: flex;
+    width: 250px;
+    height: 40px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0px 12px;
+    text-align: right;
+    margin: 1em 1em 1em 7em;
+    background: linear-gradient(80deg, rgb(254, 254, 255) 49%, rgba(34,193,195,1) 120%);
+}
+.btn-google:hover{
+    color: red;
+}
+.btn-register:hover{
+    color: red;
+}
+
+/* //login conten */
+
+.nav-login{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:white;
+    padding: 20px;
+    height: 7vh;
+    width: 100%;
+    flex-wrap: wrap;
+    background: linear-gradient(80deg, rgba(199, 252, 253, 0) 49%, rgba(254, 254, 255,1) 160%);
+}
+
+#nav-logo a img{
+    padding: auto;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height:40px;
+    margin:1.5em 1em 1em 20em;
+}
+
+.nav-login h1 {
+    padding: 20px;
+    color: black;
+    word-spacing: 2px;
+    font-size: 15px;
+    font-family: 'font-gg', Arial, sans-serif;
+}
+.nav-login h1 a{
+    text-decoration: none;
+}
+
+
+.nav-login h1 a:hover{
+    color: red;
+}
+
+#container-help a img{
+    width: 15%;
+    height: 30px;
+    margin:0em 0em 0em 18em;
+}
+
+.logo-login{
+    height:50px;
+    width: 30%;
+    margin: 10px 10px 10px 4px;
+}
+
+#content{
+    height: 80vh;
+    background: linear-gradient(14deg, rgb(254, 254, 255,0) 49%, rgb(142, 220, 240) 120%);
+    display: flex;
+    padding: 10px;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+
+}
+.login{
+    height:90%;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+    width: 25%;
+    border-radius: 40px 50px 40px 40px;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 50px 10px 1px 10px;
+    background: linear-gradient(100deg, rgb(254, 254, 255) 49%, rgba(34,193,195,1) 120%);
+    
+}
+ .logolgn {
+    height: 10%;
+    width: 20%;
+    margin: 1px 20px 1px 1px;
+   /* transition: transform 2s ease-in 2s; */
+   animation: animasigambar 20s ease-in 4s  infinite  alternate-reverse  ;
+            
+}
+.login h1{
+    font-family: 'font-gg', Arial, sans-serif;
+    font-size:  40px;
+    word-spacing: 2px;
+    
+}
+
+@keyframes animasigambar{
+    0% {
+        transform: rotateY(90deg)
+
+        
+    }
+  
+   50% {
+        transform: rotateX(720deg)  rotateY(360deg)   
+     
+    }
+   
+}
+
+.login .login-input{
+
+    width:300px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    margin: 1em 1em -2em 1em;
+}
+.btn-login {
+    width: 250px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(100deg, rgb(254, 254, 255) 49%, rgba(34,193,195,1) 120%);
+    text-align: center;
+    justify-content: center;
+    margin: 3em 1em -1em 1em;
+  }
+  .btn-login:hover{
+    color: red;
+  }
+  .btn-google{
+
+    width: 250px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 0px 12px;
+    text-align: right;
+    margin: 1em 1em 5em 1em;
+    background: linear-gradient(80deg, rgb(254, 254, 255) 49%, rgba(34,193,195,1) 120%);
+}
