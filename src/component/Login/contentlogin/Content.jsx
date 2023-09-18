@@ -2,27 +2,20 @@ import React, { useState } from 'react';
 import '../../../assets/css/project.css';
 import Logos from '../../../assets/image/imgregis/BeliKuy.png';
 import Google from '../../../assets/image/imgregis/google.png';
+import { datauser } from "../../../datauser/datauser.js";
 import { useNavigate } from "react-router-dom";
 function ContentLogin() {
-    // const [user, setUser] = useState()
-    // const [errorMessages, setErrorMessages] = useState({});
-    // const [isSubmitted, setIsSubmitted] = useState(false);
+
     const navigate = useNavigate();
 
-    const database = [
-      {
-        email: "frizky861@gmail.com",
-        password: "1411"
-      }
-    ];
-
+    
     const [formValues, setFormValues] = useState({
       email: '',
       password: '',
     });
 
-    const isSubmitDisabled = !(formValues.email && formValues.password);
-    console.log(isSubmitDisabled)
+   
+   
     const handleInputChange = (event) => {
       event.preventDefault();
       var {name,value} = event.target;
@@ -42,10 +35,11 @@ function ContentLogin() {
         [email]: email.value,
         [password]:password.value,
       });
-      const userData = database.find((user) => user.email === email.value );
+     
+      const userData = datauser.find((user) => user.email === email.value );
       
       if (userData) {
-        if(email.value !==userData.email   || password.value !== userData.password ) {
+        if(email.value !== userData.email   || password.value !== userData.password || userData.email===false) {
           alert("Your account  is incorrect, please try again")   
           return
         } else {
@@ -88,7 +82,11 @@ function ContentLogin() {
             {/* {renderErrorMessage(formValues.password)} */}
             <br />
             <br />
-            <button type='submit'  className="btn-login"  disabled={isSubmitDisabled}>Login</button>
+            <button type='submit'  
+              className={formValues.email !== "" && formValues.password !== "" ? "btn-login" :  "btn-login-disabled"}  
+            >
+              Login
+            </button>
             
             <button className="btn-google"> Google  <img className='img-gg'src={Google} alt="google"/> </button>
         </form>

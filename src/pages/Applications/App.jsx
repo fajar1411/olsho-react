@@ -1,14 +1,16 @@
-import React from 'react';
-// import Navs from '../../component/Navbar';
-
+import React from 'react'
+import NavsApp from '../../component/App/navapp/Navapp'
+import ContentApp from '../../component/App/contentapp/content'
+// import ContentLogin from '../../component/Login/contentlogin/Content'
 function App() {
   return (
-    <div className="olshop-app">
-      {/* <Navs/> */}
-      <h1>ini dashboard</h1>
-   
+    <div className='container-app'>
+       <NavsApp/>
+       <ContentApp/>
+       
     </div>
-  );
+    
+  )
 }
 
-export default App;
+export default App
