@@ -404,24 +404,18 @@
     flex-wrap: wrap;
     width:100%;
     background: linear-gradient(360deg, rgba(255, 255, 255,1) 49%, rgba(142, 220, 240,1) 120%);
-    /* background: red; */
+   
   }
-  #content-gerak{
-    height:10%;
-    width: 50%;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* margin: 5em 5em 100em 20em; */
-  
-}
+
   #container-item{
     height:15%;
     width: 20%;
     background: linear-gradient(360deg, rgba(255, 255, 255,0) 42%, rgba(142, 220, 240,0) 120%);
     border-radius:5% 5% 2% 2%;
-    margin:1em 1em 1em 1em;
+    margin:1em; 
+    /* transition: transform .1s cubic-bezier(.4,0,.6,1),box-shadow .1s cubic-bezier(.4,0,.6,1);
+    pointer-events: auto; */
+    cursor: pointer;
   }
   #content-barang{
     box-shadow: 1px 1px 4px 4px rgb(12, 12, 12);
@@ -456,24 +450,26 @@
     padding: 20px;
   }
   .btn-beli button{
-    width: 70px;
-    height: 20px;
+    width: 55px;
+    height: 40px;
     border: none;
     border-radius: 5px;
     padding: 0px 12px;
     text-align: center;
-    margin: 0.5em 2em 4em 1em;
+    margin: 0.5em 2em  2em 1em;
     background-color: linear-gradient(80deg, rgb(254, 254, 255,1) 49%, rgba(34,193,195,1) 120%);
   }
   .btn-beli .detail{
-    width: 70px;
-    height: 20px;
+    width: 55px;
+    height: 40px;
     border: none;
     border-radius: 5px;
     padding: 0px 12px;
     text-align: center;
-    margin: 0.5em 1em  4em 3em;
-    background-color: linear-gradient(80deg, rgb(254, 254, 255,1) 49%, rgba(34,193,195,1) 120%);
+    margin: 0.5em 1em  2em 1em;
+    /* background-color: linear-gradient(80deg, rgb(254, 254, 255,1) 49%, rgba(34,193,195,1) 120%); */
+    background-color: white;
+
   }
 
   .header-modal {
@@ -486,3 +482,11 @@
   .header-modal h3 {
     color: #000 !important;
   }
+
+ .img-shop{
+    float: left;
+    height: 10%;
+    width: 10px;
+   
+  }
+ 

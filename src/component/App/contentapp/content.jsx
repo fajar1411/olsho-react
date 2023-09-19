@@ -2,7 +2,8 @@
 import '../../../assets/css/project.css';
 import { Itemdata } from "../../../databarang/data.js";
 import Logos from '../../../assets/image/imgregis/BeliKuy.png';
-
+import shop from '../../../assets/image/imgregis/shop.png';
+import eyes from '../../../assets/image/imgregis/eyes.jpg';
 // import { useNavigate } from "react-router-dom";
 // import CurrencyFormat from 'react-currency-format';
 function ContentApp() {
@@ -14,9 +15,7 @@ function ContentApp() {
     <>
       
     <div  id= "content-app">
-    {/* <div  id='content-gerak'>
-
-    </div> */}
+ 
       {Itemdata.map((item) => (
       <div id="container-item">
       
@@ -30,8 +29,9 @@ function ContentApp() {
         
           <h3><span>{  item.kategori} </span> </h3>
       <div className='btn-beli'>
-          <button type='submit'>beli</button>
-          <button className= 'detail'type='submit'>Detail</button>
+          <button type='submit'><img className='img-shop'src={shop} alt="shop"/> </button>
+          <button className= 'detail'type='submit'><img className='img-eyes'src={eyes} alt="shop"/> </button>
+
       </div>
       </div>
       

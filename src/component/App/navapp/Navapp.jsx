@@ -6,6 +6,7 @@ import { Itemdata } from "../../../databarang/data.js";
 // import Help from '../../../assets/image/imgregis/help.jpg';0
 function NavsApp() {
   const [filteredList, setFilteredList] = new useState([]);
+  const [username,setUser]= useState()
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
   const customStyles = {
@@ -27,20 +28,34 @@ function NavsApp() {
   function closeModal() {
     setIsOpen(false);
   }
+
+  
+  // const Profile = (event) => {
+  //   event.preventDefault 
+
+
+  //   const data  = localStorage.getItem("email")
+  //    setUser(data)
+
+  // }
   const filterBySearch = (event) => {
 
     event.preventDefault();
     const query = event.target.value;
+    console.log("ini query",query)
     const lc= query.toLowerCase()
+
     var updatedList = [...Itemdata];
- 
+   
     updatedList = updatedList.filter((item) => {
       const lc2=  item.namaBarang.toLowerCase();
-      return lc2.indexOf(lc) < 0  ;
+      const data =lc2.indexOf(lc)  <0
+      console.log(data)
+      return data ;
     }); 
-    // Trigger render with updated values
+
     setFilteredList(updatedList);
-    setIsOpen(false);
+    // setIsOpen(false);
   };
   
   return (
@@ -62,7 +77,7 @@ function NavsApp() {
       </ul> 
 
       <ul>
-        <li>Profile</li>
+        <li  >Profile</li>
      </ul> 
      <input onClick={openModal} type="text" placeholder="Search.." name="search" value={filteredList} onChange={filterBySearch}/>
 
