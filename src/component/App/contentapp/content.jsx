@@ -7,9 +7,12 @@ import eyes from '../../../assets/image/imgregis/eyes.jpg';
 // import { useNavigate } from "react-router-dom";
 // import CurrencyFormat from 'react-currency-format';
 function ContentApp() {
+
     
-    
-  
+  const formatter = new Intl.NumberFormat("ID-ID", {
+    style: "currency",
+    currency: "IDR",
+  });
   return (
     
     <>
@@ -25,8 +28,9 @@ function ContentApp() {
       <div className='container-field'>
           <h3><span> {item.namaBarang} </span> </h3>
           <h3><span> {item.qty} </span> </h3>
-          <h3><span>{'RP' +  item.harga} </span> </h3>
-        
+          <h3><span>{formatter.format(item.harga)} </span> </h3>
+      
+
           <h3><span>{  item.kategori} </span> </h3>
       <div className='btn-beli'>
           <button type='submit'><img className='img-shop'src={shop} alt="shop"/> </button>

@@ -34,6 +34,7 @@ function ContentLogin() {
         ...formValues,
         [email]: email.value,
         [password]:password.value,
+        // [username]:userData.username,
       });
      
       const userData = datauser.find((user) => user.email === email.value );
@@ -45,6 +46,7 @@ function ContentLogin() {
         } else {
           localStorage.setItem("email", email.value )
           localStorage.setItem( "password",password.value)
+          localStorage.setItem( "username",userData.username)
           navigate("/app")
           return  ;
         }

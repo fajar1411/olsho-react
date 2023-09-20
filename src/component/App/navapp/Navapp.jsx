@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Modal from 'react-modal';
 import '../../../assets/css/project.css';
 import { Itemdata } from "../../../databarang/data.js";
+import { useEffect } from "react";
 // import Logo from '../../../assets/image/imgregis/BeliKuy.png';
 // import Help from '../../../assets/image/imgregis/help.jpg';0
 function NavsApp() {
   const [filteredList, setFilteredList] = new useState([]);
-  const [username,setUser]= useState()
+  const [username,setUser]= useState("Profile")
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
   const customStyles = {
@@ -25,19 +26,20 @@ function NavsApp() {
     setIsOpen(true);
   }
 
+  useEffect (() => {
+    profile()
+  },[])
+
   function closeModal() {
     setIsOpen(false);
   }
 
   
-  // const Profile = (event) => {
-  //   event.preventDefault 
+  const profile = () => {
+    const data  = localStorage.getItem("username")
+     setUser(data)
 
-
-  //   const data  = localStorage.getItem("email")
-  //    setUser(data)
-
-  // }
+  }
   const filterBySearch = (event) => {
 
     event.preventDefault();
@@ -77,7 +79,7 @@ function NavsApp() {
       </ul> 
 
       <ul>
-        <li  >Profile</li>
+        <li> {username}</li>
      </ul> 
      <input onClick={openModal} type="text" placeholder="Search.." name="search" value={filteredList} onChange={filterBySearch}/>
 
