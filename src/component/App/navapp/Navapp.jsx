@@ -36,7 +36,7 @@ function NavsApp() {
 
   
   const profile = () => {
-    const data  = localStorage.getItem("email")
+    const data  = localStorage.getItem("username")
      setUser(data)
 
   }
