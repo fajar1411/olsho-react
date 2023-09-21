@@ -24,7 +24,7 @@ function ContentApp() {
       
       <div id = "content-barang">
     
-      <img src={item.image} alt="" />
+      <img className='img-brng' src={item.image} alt="" />
       <div className='container-field'>
           <h3><span> {item.namaBarang} </span> </h3>
           <h3><span> {item.qty} </span> </h3>

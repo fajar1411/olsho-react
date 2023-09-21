@@ -37,7 +37,12 @@ function NavsApp() {
   
   const profile = () => {
     const data  = localStorage.getItem("username")
-     setUser(data)
+
+    if (data != ""){
+      setUser(data)
+    }
+    // setUser("Profile")
+     
 
   }
   const filterBySearch = (event) => {
