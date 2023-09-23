@@ -81,6 +81,15 @@ const Itemdata = [
       kategori: 'dewasa',
       harga: '200000',
      },
+     {
+      id: 10,
+      namaBarang: 'jeans',
+      image:'../imgcontent/hijab4.jpg',
+      qty : '6',
+      status: 'ada',
+      kategori: 'dewasa',
+      harga: '200000',
+     },
   ];
   
   export { Itemdata};
