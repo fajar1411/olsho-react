@@ -4,6 +4,8 @@ import '../../../assets/css/project.css';
 import { Itemdata } from "../../../databarang/data.js";
 import { useEffect } from "react";
 import Logo from '../../../assets/image/imgregis/BeliKuy.png';
+import Logout from '../../../assets/image/imgregis/logout.png';
+import Profile from '../../../assets/image/imgregis/profile.png';
 // import Help from '../../../assets/image/imgregis/help.jpg';0
 function NavsApp() {
   const [filteredList, setFilteredList] = new useState([]);
@@ -75,10 +77,17 @@ function NavsApp() {
         <input onClick={openModal} type="text" placeholder="Search.." name="search" value={filteredList} onChange={filterBySearch}/>
         <ul>
           <li>dahsboard</li>
-          <li> {username}</li>
           <li>logout</li>
           <li>Kategori</li>
           <li>Keranjang</li>
+          <div className="dropdowd-user">
+            <button className="dropbtn">{username}</button>
+            <div class="dropdown-content">
+              <a href="#"><img  className= 'img-lg' src={Logout} alt="Logo" />Logout</a>
+              <a href="#"><img  className= 'img-profile' src={Profile} alt="Logo" />Profile</a>
+              <a href="#">Keranjang</a>
+            </div>
+          </div>
         </ul>
       </nav>
             
