@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './pages/Applications/App';
+import Keranjang from './pages/keranjang/Keranjang';
 import Login from './pages/login/Login'; 
 import Register from './pages/Regis/Register'; 
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 
 
 const router = createBrowserRouter([
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
   {
     path: '/app',
     element: <App />,
+  },
+  {
+    path: '/keranjang/:id',
+    element: <Keranjang />,
   },
 ]);
 
