@@ -1,35 +1,20 @@
 import React, { useState,useEffect  } from "react";
 import '../../../assets/css/project.css';
-import { Itemdata } from "../../../databarang/data.js";
+// import { Itemdata } from "../../../databarang/data.js";
 import Logos from '../../../assets/image/imgregis/BeliKuy.png';
 import shop from '../../../assets/image/imgregis/shop.png';
 import eyes from '../../../assets/image/imgregis/eyes.jpg';
-// import { useNavigate } from "react-router-dom";
-// import CurrencyFormat from 'react-currency-format';
 import '@coreui/coreui/dist/css/coreui.min.css'
-
+import ContentKeranjang from "../../Keranjang/content";
 import { CImage ,CCarouselItem,CCarousel} from '@coreui/react'
 const style = {
   width: 297,
   height: 296,
 };
 
-function ContentApp() {
+function ContentApp({databarang,addToCart,formatter }) {
 
-  const [cart , setCart]= new useState([]);
- 
-  const addToCart = (item) => {
-    setCart([...cart, item]);
-    console.log(cart)
-    };
-   useEffect (() => {
-    addToCart()
-  },[])
 
-  const formatter = new Intl.NumberFormat("ID-ID", {
-    style: "currency",
-    currency: "IDR",
-  });
   
   return (
     
@@ -49,26 +34,31 @@ function ContentApp() {
     </CCarouselItem>
   </CCarousel>
   </div>
-
-  <div className="container-item">
+  <div id="content-dashboard">
+<div className="container-item">
     <div className="container-barang">
-       {Itemdata.map((item) => (
+      
+       {databarang.map((item) => (
+
       <div className="content-barang">
         <div className="content">
         <img  className='img-brng' src={item.image} alt="" />
         <div className="container-field">
           <h3>{item.namaBarang} </h3>
-          <h3> {item.qty}  </h3>
+          <h3> {item.qty}  </h3> 
           <h3>{formatter.format(item.harga)} </h3>
           <h3>{  item.kategori} </h3>
           <button onClick={() => addToCart(item)} className='keranjang' type='submit'><img className='img-shop'src={shop} alt="shop"/> </button>
           <button className= 'detail'type='submit'><img className='img-eyes'src={eyes} alt="shop"/> </button>
+        
         </div>
         </div>
       </div>
         ))}
     </div>
+ 
   </div>
+</div>
 
 
 

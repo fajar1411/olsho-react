@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/keranjang/:id',
+    path: '/keranjang',
     element: <Keranjang />,
   },
 ]);
