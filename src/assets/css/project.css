@@ -475,7 +475,6 @@
    
    }
   .nav-app ul {
-    background-color: #3e8e41;
     width: 50%;
     font-size: 10px;
     margin: 1.4em 0 1em 6.2em;
@@ -511,7 +510,7 @@
   /* dashboard */
   #container-dashboard{
     width: 100%;
-    height: 1000px;
+    height:500px;
     box-sizing: border-box;
    
    }
@@ -519,46 +518,59 @@
     display: flex;
     justify-content: center;
     padding: 20px 20px;
-    height: 40%;
+    height: 100%;
     width: 100%;
     background: linear-gradient(360deg, rgba(255, 255, 255,1) 49%, rgba(142, 220, 240,0.5) 120%);
     flex-direction: column;
     box-sizing: border-box;
+    /* background-color: red; */
 
+  }
+  #content-dashboard{
+    width: 100%;
+    height: 800px;
+    box-sizing: border-box;
+  
   }
   .container-item{
     display: flex;
-    height: 60%;
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
     background: linear-gradient(180deg, rgba(255, 255, 255,1) 49%, rgba(142, 220, 240,1) 120%);
+    background-color: blue;
+
+  
   }
    .container-barang{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     height:100%;
     width:100%;
     flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     transition: 0.5s;
+    box-sizing: border-box;
   }
    .content-barang{
     display: flex;
-    justify-content: space-between;
-    height:60%;
+    height:45%;
     width:15%;
     border-radius:5% 5% 2% 2%;
     box-shadow: 1px 1px 4px 4px rgb(12, 12, 12);
     box-sizing: border-box;
-    flex-direction: column;
+    margin:15px 20px;
+
    }
    .content{
+    display: flex;
     height: 100%;
     width:100%;
     border-radius: inherit;
-    background: linear-gradient(360deg, rgba(255, 255, 255,0) 49%, rgba(142, 220, 240,0) 120%);
- 
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    max-width: 800px;
    }
    .content .img-brng{
     height: 50%;
@@ -566,44 +578,48 @@
     border-radius:5% 5% 0% 0%;
    }
    .container-field{
-    display: block;
-    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    height:48%;
     width: 100%;
+    margin:4px 4px;
+    padding: 10px 10px;
     box-sizing: border-box;
-    background: linear-gradient(360deg, rgba(255, 255, 255,0) 49%, rgba(142, 220, 240,0) 120%);
- 
+    flex-direction: column;
   }
   .container-field h3{
     font-weight: bold;
     font-family: 'font-gg', Arial, sans-serif;
     text-align: justify;
-    font-size:  20px;
+    font-size:  18px;
     word-spacing:5px;
   }
   .keranjang{
+    position: relative;
     width: 40px;
     height: 30px;
     border: none;
     background: linear-gradient(360deg, rgba(255, 255, 255,0) 49%, rgba(142, 220, 240,0) 120%);
-    margin: 0.1em 3em;
+    margin: 0.1em 1em;
+    padding: 10px 20px;
   }
   .img-shop{
     width: 30px;
-    height: 20px;
+    height:30px;
   }
 
   .detail{
-    float: right;
+    position: relative;
     width: 40px;
     height: 30px;
     border: none;
     background: linear-gradient(360deg, rgba(255, 255, 255,0) 49%, rgba(142, 220, 240,0) 120%);
-    margin:-1.8em 3em ;
-
+    margin:7.8em -3em ;
+    padding: 10px 10px;
   }
   .img-eyes{
     width: 30px;
-    height: 30px;
+    height: 20px;
   }
   .container-barang .content-barang:hover{
     position: relative;
@@ -620,15 +636,16 @@
 
   @media screen and (max-width: 576px) {
     .container-geser{
-      height: 30%;
+      height: 50%;
     }
     .content-barang{
-      height: 30%;
+      height: 25%;
       width: 20%;
       background-color: rebeccapurple;
+      margin:15px 12px;
     }
     .container-field h3{
-      font-size:  10px;
+      font-size:  8px;
       word-spacing:3px;
     }
     
@@ -641,13 +658,14 @@
       height: 15px;
     }
     .detail{
-      float: right;
-      margin:-1em 1em ;
+     
+      margin:2.9em -2em ;
     }
     .keranjang{
-      float: left;
-      margin: -1em 0.5em;
+  
+      margin: -1.5em -0.6em;
     }
+    
    }
    #container-keranjang{
     height: 900px;

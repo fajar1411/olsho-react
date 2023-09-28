@@ -7,8 +7,8 @@ import Logo from '../../../assets/image/imgregis/BeliKuy.png';
 import Logout from '../../../assets/image/imgregis/logout.png';
 import Profile from '../../../assets/image/imgregis/profile.png';
 // import Help from '../../../assets/image/imgregis/help.jpg';0
-function NavsApp() {
-  const [filteredList, setFilteredList] = new useState([]);
+function NavsApp({searchquery, setquery,query}) {
+
   const [username,setUser]= useState("Profile")
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -43,38 +43,24 @@ function NavsApp() {
     if (data != ""){
       setUser(data)
     }
-    // setUser("Profile")
-     
 
   }
-  const filterBySearch = (event) => {
+ const handlesearch = (e)=>{
+    e.preventDefault();
 
-    event.preventDefault();
-    const query = event.target.value;
-    console.log("ini query",query)
-    const lc= query.toLowerCase()
-
-    var updatedList = [...Itemdata];
-   
-    updatedList = updatedList.filter((item) => {
-      const lc2=  item.namaBarang.toLowerCase();
-      const data =lc2.indexOf(lc)  <0
-      console.log(data)
-      return data ;
-    }); 
-
-    setFilteredList(updatedList);
-    // setIsOpen(false);
-  };
-  
+    query = e.target.value;
+    console.log("ini query", query)
+    setquery(query)
+ }
   return (
     
     <>
       <nav className="nav-app">
         <div className="img-nd"> 
           <img src={Logo} alt="Logo" />
+          
         </div>
-        <input onClick={openModal} type="text" placeholder="Search.." name="search" value={filteredList} onChange={filterBySearch}/>
+        <input  type="text" placeholder="Search.." name="search" value={searchquery} onChange={handlesearch}/>
         <ul>
           <li>dahsboard</li>
           <li>logout</li>
